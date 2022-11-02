@@ -1,0 +1,29 @@
+<div>
+    <div class="container d-flex justify-content-center">
+        <div *ngFor="let item of cardArr" class="card">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 [ngClass]="{'text-red': item.status}" class="card-title">{{ item.title }}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container top-margin">
+        <span [ngSwitch]="projectStatus">
+            <div *ngSwitchCase="'under development'">
+                <p>Currently we are under development</p>
+            </div>
+            <div *ngSwitchCase="'maintenance'">
+                <p>Currently we are in maintenance</p>
+            </div>
+            <div *ngSwitchDefault>
+                <p>Welcome</p>
+            </div>
+        </span>
+    </div>
+</div>
