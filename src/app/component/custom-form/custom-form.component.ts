@@ -12,11 +12,11 @@ export class CustomFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  userName = "";
-  userEmail = "";
-  isFormSubmit = false;
+  public userName: string = "";
+  public userEmail: string = "";
+  public isFormSubmit: boolean = false;
 
-  submitForm(){
+  public submitForm(): void{
     if(this.userEmail && this.userName){
       this.isFormSubmit = true;
     }

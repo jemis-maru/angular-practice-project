@@ -12,9 +12,9 @@ export class CustomCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  projectStatus = "under development"
+  public projectStatus: string = "under development"
 
-  cardArr = [
+  public cardArr: Array<{image: string, title: string, status: boolean}> = [
     {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZt0h5A35LHrauX4SLMDBlYbuwBclkGxrMkKf4JxYhyRfNNPi-boQwC3na3IgY4WI3AZo&usqp=CAU",
       title: "Card 1",
