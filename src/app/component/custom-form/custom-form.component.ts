@@ -14,12 +14,21 @@ export class CustomFormComponent implements OnInit {
 
   public userName: string = "";
   public userEmail: string = "";
+  public userType: string = "";
   public isFormSubmit: boolean = false;
+  
+
+  public userList: Array<string> = ['Admin', 'Seller', 'Buyer'];
+  public selectedUser:string = "rony";
 
   public submitForm(): void{
     if(this.userEmail && this.userName){
       this.isFormSubmit = true;
     }
+  }
+
+  public getSelectedValue(value: string): void{
+    this.userType = value;
   }
 
 }

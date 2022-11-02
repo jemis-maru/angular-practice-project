@@ -1,0 +1,8 @@
+<div>
+    <p>Select User : </p>
+    <select class="form-select" [(ngModel)]="currentSelectedUser" (change)="getSelectedUserAccess()">
+        <option *ngFor="let user of users" [selected]="currentSelectedUser === user">
+            {{user}}
+        </option>
+    </select>
+</div>

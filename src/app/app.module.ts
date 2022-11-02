@@ -9,6 +9,7 @@ import { CustomFormComponent } from './component/custom-form/custom-form.compone
 import { CustomCardComponent } from './component/custom-card/custom-card.component';
 import { ContentComponent } from './component/content/content.component';
 import { FormsModule } from '@angular/forms';
+import { BaseSelectComponent } from './component/base-select/base-select.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     CustomFormComponent,
     CustomCardComponent,
-    ContentComponent
+    ContentComponent,
+    BaseSelectComponent
   ],
   imports: [
     BrowserModule,
