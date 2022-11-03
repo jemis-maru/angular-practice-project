@@ -9,11 +9,13 @@
       <input type="email" name="userEmail" [(ngModel)]="userEmail" class="form-control" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <app-base-select (changeSelected)="getSelectedValue($event)" [options]="userList" [selectedOption]="selectedUser"></app-base-select>
+      <app-base-select (changeSelected)="getSelectedValue($event)" [options]="userList" [selectedOption]="selectedUser">
+        <p info>Select User : </p>
+      </app-base-select>
     </div>
     <div class="form-group">
       <label for="userEmail">User type</label>
-      <input type="text" name="userType" [(ngModel)]="userType" class="form-control" placeholder="User type">
+      <input #userTypeRef type="text" name="userType" [(ngModel)]="userType" class="form-control" placeholder="User type">
     </div>
     <button type="button" (click)="submitForm()" class="btn btn-primary">Submit</button>
   </form>

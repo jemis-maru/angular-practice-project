@@ -1,5 +1,5 @@
 <div>
-    <p>Select User : </p>
+    <ng-content [select]="info"></ng-content>
     <select class="form-select" [(ngModel)]="currentSelectedUser" (change)="getSelectedUserAccess()">
         <option *ngFor="let user of users" [selected]="currentSelectedUser === user">
             {{user}}
